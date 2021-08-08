@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Jun 22 21:12:40 2021
-
-@author: h.pineda
-"""
 import streamlit as st
 import numpy as np
 import matplotlib.pyplot as plt
