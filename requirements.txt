@@ -2,10 +2,9 @@ streamlit
 numpy
 matplotlib
 pandas
-re
 requests 
 flair
-re
+regex
 datetime
 
 
