@@ -1,10 +1,10 @@
-streamlit
-numpy
-matplotlib
-pandas
-requests 
-flair
-regex
-datetime
+flair==0.8.0.post1
+huggingface-hub==0.0.12
+matplotlib==3.2.2
+numpy==1.19.5
+pandas==1.0.5
+regex==2020.6.8 
+requests==2.25.1
+streamlit==0.86.0
 
 

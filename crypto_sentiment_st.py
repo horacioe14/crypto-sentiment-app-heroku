@@ -280,26 +280,31 @@ def plot_sentiment_price(price, sentiment):
     return st.pyplot(fig) #fig.savefig('fig1.png')
 
 
-
+# For st.write formatting refer to  https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#tables 
 
 st.write(""" 
          
 # Cryptocurrency Price vs Twitter Sentiment Analysis App
 
-Below are the **correlation ratios** and ***plot*** of the cryptocurrency of your choice.    
+Below are the **plot** and ***correlation ratios*** of the cryptocurrency of your choice:
 
    
 """)
 
-symbol = st.text_input(' ', 'Input the cryptocurrency symbol here')
-coin = st.text_input(' ', 'Input the cryptocurrency name here to search on Twitter')
+st.write(""" Type the cryptocurrency symbol here:""")
+symbol = st.text_input('', 'BTC')
+st.write(
+    
+    """ 
+         
+         Type the cryptocurrency name to search on Twitter:""")
+coin = st.text_input('', 'bitcoin')
 
 
 
 
-#def do_everything(symbol, coin):
-#symbol = input('Input cryptocurrency symbol:')
-#coin = input('Search cryptocurrency on twitter:')
+
+
 price_hour = crypto_price_hour(symbol)
 price_day = crypto_price_day(symbol)
 crypto_df = crypto_tweets(coin)
@@ -307,6 +312,9 @@ sentiment = sentiment_daily_avg(price_hour, crypto_df)
 corr = price_sentiment_corr(price_hour, price_day, crypto_df)
 corr2 = price_sentiment_corr_2(price_hour, crypto_df)
 plot_sentiment_price(price_hour, sentiment)
+
+
+
 
 st.write(corr)
 st.write(corr2)
